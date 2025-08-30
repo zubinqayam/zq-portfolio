@@ -1,417 +1,561 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zubin Qayam | Healthcare Marketing & Operations Leader</title>
-  <meta name="description" content="Driving growth through strategic marketing, efficient operations, and exceptional client relations in healthcare and corporate settings." />
-  <meta property="og:title" content="Zubin Qayam | Healthcare Marketing & Operations Leader" />
-  <meta property="og:description" content="Strategic marketing, efficient operations, and client-first delivery in healthcare and corporate sectors." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/og-image.jpg" />
-  <meta name="theme-color" content="#111827" />
-  <!-- Tailwind via CDN for quick MVP -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html { scroll-behavior: smooth; }
-    .gradient { background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 50%, #7c3aed 100%); }
-  </style>
-  <!-- JSON-LD Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Zubin Qayam",
-    "jobTitle": "Healthcare Marketing & Operations Leader",
-    "url": "https://zq-portfolio.example",
-    "sameAs": [
-      "https://www.linkedin.com/in/zubin-qayam-p-m-b22bb7170",
-      "https://g.dev/zubinqayam",
-      "https://learn.microsoft.com/en-us/users/me/achievements#badges-section"
-    ],
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Lifeline Hospital LLC"
-    }
-  }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zubin Qayam - Corporate Business Development & Marketing Executive</title>
+    <meta name="description" content="Professional portfolio of Zubin Qayam, Corporate Business Development & Marketing Executive at Lifeline Hospital LLC, Sohar, Oman">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 text-gray-900">
-  <!-- Top Bar -->
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#home" class="font-semibold tracking-tight">Zubin Qayam</a>
-      <nav class="hidden md:flex gap-6 text-sm">
-        <a href="#about" class="hover:text-indigo-600">About</a>
-        <a href="#projects" class="hover:text-indigo-600">Projects</a>
-        <a href="#skills" class="hover:text-indigo-600">Skills</a>
-        <a href="#certs" class="hover:text-indigo-600">Certifications</a>
-        <a href="#contact" class="hover:text-indigo-600">Contact</a>
-      </nav>
-      <a href="#contact" class="inline-flex items-center rounded-xl bg-indigo-600 px-4 py-2 text-white text-sm shadow hover:bg-indigo-500">Let’s Talk</a>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section id="home" class="relative overflow-hidden">
-    <div class="gradient absolute inset-0 opacity-10 -z-10"></div>
-    <div class="max-w-7xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Healthcare Marketing & Operations Leader</h1>
-        <p class="mt-4 text-lg text-gray-700">Driving growth through strategic marketing, efficient operations, and exceptional client relations in healthcare and corporate settings.</p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#projects" class="rounded-xl bg-gray-900 text-white px-5 py-3 text-sm shadow hover:bg-gray-800">View My Work</a>
-          <a href="#about" class="rounded-xl border border-gray-300 px-5 py-3 text-sm hover:bg-white">Explore My Expertise</a>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <div class="nav__content">
+                <div class="nav__brand">
+                    <span class="nav__name">Zubin Qayam</span>
+                </div>
+                <ul class="nav__menu" id="nav-menu">
+                    <li><a href="#hero" class="nav__link">Home</a></li>
+                    <li><a href="#summary" class="nav__link">Summary</a></li>
+                    <li><a href="#achievements" class="nav__link">Achievements</a></li>
+                    <li><a href="#experience" class="nav__link">Experience</a></li>
+                    <li><a href="#certifications" class="nav__link">Certifications</a></li>
+                    <li><a href="#competencies" class="nav__link">Competencies</a></li>
+                    <li><a href="#blog" class="nav__link">Blog</a></li>
+                    <li><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+                <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
-        <!-- Logos / Badges -->
-        <div class="mt-8 flex flex-wrap items-center gap-3">
-          <span class="text-xs uppercase tracking-wide text-gray-500">Badges</span>
-          <a href="https://learn.microsoft.com/en-us/users/me/achievements#badges-section" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white px-3 py-1 text-xs hover:bg-gray-50">
-            <span class="font-medium">Microsoft Learn</span><span class="text-gray-500">Achievements</span>
-          </a>
-          <a href="https://g.dev/zubinqayam" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white px-3 py-1 text-xs hover:bg-gray-50">
-            <span class="font-medium">Google Developers</span><span class="text-gray-500">Profile</span>
-          </a>
+    </nav>
+
+    <!-- Hero Section with Badge Wall -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__badge-wall">
+                    <div class="badge-indicators">
+                        <div class="badge-dot"></div>
+                        <span class="badge-text">Verified Professional</span>
+                    </div>
+                    <div class="badge-links">
+                        <a href="https://g.dev/zubinqayam" target="_blank" rel="noopener noreferrer" class="badge-link">
+                            <span class="badge-platform">Google Developer</span>
+                        </a>
+                        <a href="https://linkedin.com/in/zubin-qayam-b22bb7170" target="_blank" rel="noopener noreferrer" class="badge-link">
+                            <span class="badge-platform">LinkedIn</span>
+                        </a>
+                        <a href="https://zubinlifeline.blogspot.com/" target="_blank" rel="noopener noreferrer" class="badge-link">
+                            <span class="badge-platform">Healthcare Blog</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero__text">
+                    <h1 class="hero__title">
+                        <span class="hero__name">Zubin Qayam</span>
+                        <span class="hero__role">Corporate Business Development & Marketing Executive</span>
+                    </h1>
+                    <p class="hero__tagline">Driving strategic partnerships and multi-million-dollar revenue growth in Oman's industrial healthcare sector</p>
+                    <div class="hero__location">
+                        <span class="location-icon">📍</span>
+                        <span>Sohar, Oman</span>
+                    </div>
+                </div>
+
+                <div class="hero__contact">
+                    <a href="mailto:zubin.qayam@outlook.com" class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <span>zubin.qayam@outlook.com</span>
+                    </a>
+                    <a href="tel:+96878572706" class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span>+968 7857 2706</span>
+                    </a>
+                </div>
+
+                <div class="hero__actions">
+                    <a href="#contact" class="btn btn--primary">Get In Touch</a>
+                    <a href="#achievements" class="btn btn--secondary">View Achievements</a>
+                </div>
+            </div>
         </div>
-          <div class="h-8 w-24 bg-gray-200 rounded"></div>
-          <div class="h-8 w-24 bg-gray-200 rounded"></div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section class="section" id="summary">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Executive Summary</h2>
+                <p class="section__subtitle">Strategic leadership in Oman's industrial healthcare transformation</p>
+            </div>
+            <div class="summary__content">
+                <div class="summary__highlight">
+                    <div class="highlight-card">
+                        <h3 class="highlight-number">4+</h3>
+                        <p class="highlight-text">Years generating multi-million-dollar revenue streams</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h3 class="highlight-number">15+</h3>
+                        <p class="highlight-text">Industrial projects in pipeline across Sohar Freezone</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h3 class="highlight-number">100%</h3>
+                        <p class="highlight-text">Alignment with Oman's Vision 2040 objectives</p>
+                    </div>
+                </div>
+                <div class="summary__description">
+                    <p>Accomplished business development executive with proven expertise in strategic partnerships within Oman's industrial healthcare sector. Specialized in B2B relationship management, account-based marketing, and AI-powered lead generation systems.</p>
+                    <p>Successfully positioned Lifeline Hospital LLC as the premier Vision 2040-compliant healthcare provider, facilitating partnerships between multinational corporations and healthcare services across polysilicon, solar, and LNG sectors.</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="relative">
-        <div class="aspect-[4/5] w-full rounded-2xl bg-gray-200 shadow-inner"></div>
-        <p class="sr-only">Place your professional photo here.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About / Expertise -->
-  <section id="about" class="py-16 md:py-24 bg-white border-t border-gray-100">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-bold">About Zubin / My Expertise</h2>
-      <p class="mt-4 text-gray-700 max-w-3xl">Results-driven marketing and operations professional with hands-on experience across hospital marketing, clinic management, corporate approvals, and medical camps. I blend strategic planning with on-the-ground execution to grow patient pipelines, streamline operations, and elevate client satisfaction.</p>
+    <!-- Key Achievements -->
+    <section class="section section--dark" id="achievements">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Major Project Achievements</h2>
+                <p class="section__subtitle">Industry-defining partnerships and multi-million-dollar contracts</p>
+            </div>
+            <div class="achievements__grid">
+                <div class="achievement-card achievement-card--blue">
+                    <div class="achievement-card__header">
+                        <h3 class="achievement-card__title">United Solar Polysilicon Partnership</h3>
+                        <span class="achievement-card__badge">Industry First</span>
+                    </div>
+                    <p class="achievement-card__description">Secured multi-million-dollar healthcare service contract, establishing industry's first blueprint for corporate medical partnerships</p>
+                    <div class="achievement-card__details">
+                        <p><strong>Stakeholders:</strong> China National Chemical & EPC contractors</p>
+                        <p><strong>Impact:</strong> Industry-defining partnership model</p>
+                    </div>
+                </div>
 
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl border p-6 bg-gray-50">
-          <h3 class="font-semibold">Marketing Strategy & Execution</h3>
-          <ul class="mt-3 list-disc list-inside text-gray-700 text-sm space-y-1">
-            <li>Campaign planning and GTM for services</li>
-            <li>Lead-gen funnels & performance tracking</li>
-            <li>Content calendars & asset ops</li>
-          </ul>
+                <div class="achievement-card achievement-card--green">
+                    <div class="achievement-card__header">
+                        <h3 class="achievement-card__title">JA Solar Corporate Engagement</h3>
+                        <span class="achievement-card__badge">Q1 2026</span>
+                    </div>
+                    <p class="achievement-card__description">Developed healthcare ecosystem for 6GW solar manufacturing facility</p>
+                    <div class="achievement-card__details">
+                        <p><strong>Timeline:</strong> Revenue pipeline with operations launching Q1 2026</p>
+                        <p><strong>Impact:</strong> Strategic positioning in renewable energy sector</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card achievement-card--purple">
+                    <div class="achievement-card__header">
+                        <h3 class="achievement-card__title">Marsa LNG Strategic Partnership</h3>
+                        <span class="achievement-card__badge">World First</span>
+                    </div>
+                    <p class="achievement-card__description">Conceptualized healthcare framework for world's first renewable-powered LNG facility</p>
+                    <div class="achievement-card__details">
+                        <p><strong>Partners:</strong> TotalEnergies & OQEP JV, Technip Energies, CB&I</p>
+                        <p><strong>Backing:</strong> World Bank & IFC collaboration</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card achievement-card--orange">
+                    <div class="achievement-card__header">
+                        <h3 class="achievement-card__title">Sohar Freezone Expansion</h3>
+                        <span class="achievement-card__badge">Market Leader</span>
+                    </div>
+                    <p class="achievement-card__description">Built comprehensive pipeline across 15+ industrial projects</p>
+                    <div class="achievement-card__details">
+                        <p><strong>Result:</strong> Positioned hospital as premier Vision 2040-compliant provider</p>
+                        <p><strong>Impact:</strong> Market leadership in industrial healthcare</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="rounded-2xl border p-6 bg-gray-50">
-          <h3 class="font-semibold">Operational Management</h3>
-          <ul class="mt-3 list-disc list-inside text-gray-700 text-sm space-y-1">
-            <li>Clinic workflow optimization & SOPs</li>
-            <li>Vendor & stakeholder coordination</li>
-            <li>Budgeting & cost control</li>
-          </ul>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Professional Experience</h2>
+                <p class="section__subtitle">Proven track record in business development and strategic partnerships</p>
+            </div>
+            <div class="experience__timeline">
+                <div class="timeline-item timeline-item--current">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Business Development & Marketing Executive</h3>
+                            <div class="timeline-meta">
+                                <span class="timeline-company">Lifeline Hospital LLC</span>
+                                <span class="timeline-location">Sohar, Oman</span>
+                                <span class="timeline-period">2019 – Present</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-achievements">
+                            <li>Spearheaded corporate partnership development, securing multi-million-dollar contracts</li>
+                            <li>Directed strategic account management and negotiated multi-million-dollar proposals</li>
+                            <li>Drove market expansion across Sohar Freezone and emerging industrial zones</li>
+                            <li>Pioneered AI-powered lead generation systems and automated HubSpot CRM workflows</li>
+                            <li>Managed stakeholder relationships with IFC, World Bank, and EPC contractors</li>
+                            <li>Authored industry-specific value propositions for polysilicon, solar, and LNG sectors</li>
+                            <li>Created and optimized healthcare content using HubSpot and content marketing strategies</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Project Manager & Business Development Consultant</h3>
+                            <div class="timeline-meta">
+                                <span class="timeline-company">Phoenix Builders</span>
+                                <span class="timeline-location">India</span>
+                                <span class="timeline-period">2018 – 2021</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-achievements">
+                            <li>Orchestrated multi-million-dollar project portfolios with consistent on-time delivery</li>
+                            <li>Cultivated strategic client relationships across diverse EPC projects</li>
+                            <li>Directed cross-functional engineering, procurement, and construction teams</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="rounded-2xl border p-6 bg-gray-50">
-          <h3 class="font-semibold">Corporate & Client Relations</h3>
-          <ul class="mt-3 list-disc list-inside text-gray-700 text-sm space-y-1">
-            <li>Corporate approvals & relationship mgmt</li>
-            <li>Partner onboarding & retention</li>
-            <li>Client feedback loops</li>
-          </ul>
+    </section>
+
+    <!-- Certifications & Badge Wall -->
+    <section class="section section--dark" id="certifications">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Professional Certifications</h2>
+                <p class="section__subtitle">Continuous learning and expertise validation across multiple platforms</p>
+            </div>
+            <div class="certifications__grid">
+                <div class="cert-category">
+                    <div class="cert-category__header">
+                        <h3 class="cert-category__title">Microsoft Learn</h3>
+                        <span class="cert-category__year">2025</span>
+                    </div>
+                    <ul class="cert-list">
+                        <li class="cert-item">Responsible AI with GitHub Copilot</li>
+                        <li class="cert-item">Describe Cloud Computing</li>
+                        <li class="cert-item">Use AI for Everyday Tasks</li>
+                        <li class="cert-item">Introduction to Machine Learning Concepts</li>
+                        <li class="cert-item">Explore Core Data Concepts</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <div class="cert-category__header">
+                        <h3 class="cert-category__title">Google Developer</h3>
+                        <span class="cert-category__year">2025</span>
+                    </div>
+                    <ul class="cert-list">
+                        <li class="cert-item">Google Cloud Innovator</li>
+                        <li class="cert-item">Google Developer Program Member</li>
+                        <li class="cert-item">Cloud Forums User</li>
+                        <li class="cert-item">Workspace Forums User</li>
+                        <li class="cert-item">AI-Powered Market Analysing App Solution</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <div class="cert-category__header">
+                        <h3 class="cert-category__title">HubSpot Academy</h3>
+                        <span class="cert-category__year">2024</span>
+                    </div>
+                    <ul class="cert-list">
+                        <li class="cert-item">Inbound Marketing Certification</li>
+                        <li class="cert-item">Contextual Marketing & ABM Strategies</li>
+                    </ul>
+                </div>
+
+                <div class="cert-category">
+                    <div class="cert-category__header">
+                        <h3 class="cert-category__title">Additional Certifications</h3>
+                        <span class="cert-category__year">2024-2025</span>
+                    </div>
+                    <ul class="cert-list">
+                        <li class="cert-item">Meta: Marketing Analytics & ROI Optimization</li>
+                        <li class="cert-item">LinkedIn: AI-Powered Business Collaboration</li>
+                        <li class="cert-item">LinkedIn: Advanced Business Development</li>
+                        <li class="cert-item">Google Analytics: Advanced B2B Marketing</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="rounded-2xl border p-6 bg-gray-50">
-          <h3 class="font-semibold">Clinic & Camp Coordination</h3>
-          <ul class="mt-3 list-disc list-inside text-gray-700 text-sm space-y-1">
-            <li>Medical camp planning & execution</li>
-            <li>On-site ops & logistics</li>
-            <li>Risk & safety planning</li>
-          </ul>
+    </section>
+
+    <!-- Core Competencies -->
+    <section class="section" id="competencies">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Core Competencies</h2>
+                <p class="section__subtitle">Strategic expertise across business development and industrial sectors</p>
+            </div>
+            <div class="competencies__grid">
+                <div class="competency-card competency-card--blue">
+                    <h3 class="competency-card__title">New Business Acquisition & Market Expansion</h3>
+                    <ul class="competency-list">
+                        <li>Partnership Development</li>
+                        <li>Strategic Market Penetration</li>
+                        <li>B2B Relationship Management</li>
+                        <li>Revenue Pipeline Development</li>
+                    </ul>
+                </div>
+
+                <div class="competency-card competency-card--purple">
+                    <h3 class="competency-card__title">Strategic Corporate Marketing</h3>
+                    <ul class="competency-list">
+                        <li>Account-Based Marketing (ABM)</li>
+                        <li>Corporate Healthcare Service Positioning</li>
+                        <li>Multi-channel B2B Campaign Management</li>
+                        <li>Stakeholder Engagement</li>
+                    </ul>
+                </div>
+
+                <div class="competency-card competency-card--green">
+                    <h3 class="competency-card__title">Industrial Sector Expertise</h3>
+                    <ul class="competency-list">
+                        <li>Healthcare Service Development</li>
+                        <li>Regulatory Compliance Marketing</li>
+                        <li>EPC Contractor Relationship Management</li>
+                        <li>Vision 2040 Alignment</li>
+                    </ul>
+                </div>
+
+                <div class="competency-card competency-card--orange">
+                    <h3 class="competency-card__title">Content Marketing & Digital Strategy</h3>
+                    <ul class="competency-list">
+                        <li>Healthcare Content Creation</li>
+                        <li>HubSpot Content Optimization</li>
+                        <li>Patient Education Materials</li>
+                        <li>Digital Health Communication</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tools-section">
+                <h3 class="tools-title">Technical & Business Tools</h3>
+                <div class="tools-grid">
+                    <div class="tool-category">
+                        <h4 class="tool-category__title">CRM & Business Intelligence</h4>
+                        <div class="tool-tags">
+                            <span class="tool-tag">HubSpot (Advanced)</span>
+                            <span class="tool-tag">Salesforce</span>
+                            <span class="tool-tag">Power BI</span>
+                            <span class="tool-tag">Google Analytics 4</span>
+                        </div>
+                    </div>
+                    <div class="tool-category">
+                        <h4 class="tool-category__title">AI & Cloud Platforms</h4>
+                        <div class="tool-tags">
+                            <span class="tool-tag">Microsoft Copilot</span>
+                            <span class="tool-tag">Google Cloud Platform</span>
+                            <span class="tool-tag">Microsoft Azure</span>
+                            <span class="tool-tag">NVIDIA AI Solutions</span>
+                        </div>
+                    </div>
+                    <div class="tool-category">
+                        <h4 class="tool-category__title">Content & Marketing Tools</h4>
+                        <div class="tool-tags">
+                            <span class="tool-tag">HubSpot Content Hub</span>
+                            <span class="tool-tag">Blogger/Blogspot</span>
+                            <span class="tool-tag">Canva</span>
+                            <span class="tool-tag">Google Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="rounded-2xl border p-6 bg-gray-50">
-          <h3 class="font-semibold">Content Creation</h3>
-          <ul class="mt-3 list-disc list-inside text-gray-700 text-sm space-y-1">
-            <li>Copywriting & social content</li>
-            <li>Presentation & brochure design</li>
-            <li>Basic photo/video editing</li>
-          </ul>
+    </section>
+
+    <!-- Blog & Content Section -->
+    <section class="section section--dark" id="blog">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Healthcare Content & Thought Leadership</h2>
+                <p class="section__subtitle">Professional blog focusing on healthcare education, industry insights, and medical awareness</p>
+            </div>
+            
+            <div class="blog__content">
+                <div class="blog__intro">
+                    <div class="blog-intro__text">
+                        <h3>Content Creation Expertise</h3>
+                        <p>Leveraging HubSpot and modern content marketing strategies, I create educational healthcare content that bridges the gap between medical professionals and the community. My blog serves as a platform for healthcare education, industry insights, and thought leadership in the medical sector.</p>
+                        <div class="blog-expertise">
+                            <h4>Content Marketing Skills</h4>
+                            <ul class="expertise-list">
+                                <li>Healthcare Education Content</li>
+                                <li>Medical Awareness Campaigns</li>
+                                <li>Patient Education Materials</li>
+                                <li>Healthcare Marketing Content</li>
+                                <li>Digital Health Communication</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="blog-intro__stats">
+                        <div class="blog-stat">
+                            <h4>Blog Platform</h4>
+                            <p>Google Blogger/Blogspot</p>
+                        </div>
+                        <div class="blog-stat">
+                            <h4>Content Focus</h4>
+                            <p>Healthcare Education & Awareness</p>
+                        </div>
+                        <div class="blog-stat">
+                            <h4>Marketing Integration</h4>
+                            <p>HubSpot Content Strategy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog__featured">
+                    <h3 class="blog-featured__title">Featured Healthcare Content</h3>
+                    <div class="blog-posts">
+                        <article class="blog-post blog-post--featured">
+                            <div class="blog-post__header">
+                                <div class="blog-post__category">Healthcare Education</div>
+                                <div class="blog-post__date">May 2025</div>
+                            </div>
+                            <h4 class="blog-post__title">Your Definitive Guide to Skin Cancer</h4>
+                            <p class="blog-post__excerpt">Essential information for understanding skin cancer risks, prevention strategies, and the importance of early detection in treatment success. This comprehensive guide covers prevention, early detection, and treatment options.</p>
+                            <div class="blog-post__topics">
+                                <span class="topic-tag">Prevention</span>
+                                <span class="topic-tag">Early Detection</span>
+                                <span class="topic-tag">Treatment Options</span>
+                                <span class="topic-tag">Healthcare Awareness</span>
+                            </div>
+                            <div class="blog-post__actions">
+                                <a href="https://zubinlifeline.blogspot.com/2025/05/your-definitive-guide-to-skin-cancer.html" target="_blank" rel="noopener noreferrer" class="btn btn--primary" onclick="window.open(this.href, '_blank'); return false;">Read Full Article</a>
+                                <div class="blog-post__impact">
+                                    <span class="impact-label">Content Marketing Impact:</span>
+                                    <span class="impact-text">Comprehensive healthcare education resource</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="blog__cta">
+                    <div class="blog-cta__content">
+                        <h3>Explore Healthcare Insights</h3>
+                        <p>Visit my healthcare blog to discover more educational content, industry insights, and medical awareness articles. All content is created using professional content marketing strategies and HubSpot optimization techniques.</p>
+                        <div class="blog-cta__actions">
+                            <a href="https://zubinlifeline.blogspot.com/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg" onclick="window.open(this.href, '_blank'); return false;">Visit Healthcare Blog</a>
+                            <a href="#contact" class="btn btn--outline btn--lg">Discuss Content Marketing</a>
+                        </div>
+                    </div>
+                    <div class="blog-cta__highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">📝</span>
+                            <span>Professional Healthcare Content</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🎯</span>
+                            <span>HubSpot Content Strategy</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">📊</span>
+                            <span>Content Marketing Expertise</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🏥</span>
+                            <span>Healthcare Education Focus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="rounded-2xl border p-6 bg-gray-50">
-          <h3 class="font-semibold">Leadership & Initiative</h3>
-          <ul class="mt-3 list-disc list-inside text-gray-700 text-sm space-y-1">
-            <li>Cross-functional coordination</li>
-            <li>Process improvement mindset</li>
-            <li>Data-informed decisions</li>
-          </ul>
+    </section>
+
+    <!-- Industry Context -->
+    <section class="section section--context">
+        <div class="container">
+            <div class="context__content">
+                <h2 class="context__title">Strategic Industry Position</h2>
+                <p class="context__description">
+                    Sohar Freezone represents a cornerstone of Oman's Vision 2040, with over $30 billion in cumulative investments and strategic Chinese industrial partnerships. This positions Zubin's work at the forefront of Oman's industrial healthcare transformation, facilitating critical partnerships between multinational corporations including United Solar, JA Solar, and Marsa LNG projects.
+                </p>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <!-- Optional video -->
-      <div class="mt-10 rounded-2xl bg-gray-100 p-6">
-        <p class="text-sm text-gray-600">Optional: Embed a short 45–60s intro video here (host on YouTube/Vimeo, unlisted).</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects / Work -->
-  <section id="projects" class="py-16 md:py-24">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-bold">Featured Projects / My Work</h2>
-      <p class="mt-2 text-gray-700">Case-study style highlights with outcomes.</p>
-
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <!-- Case Study Card Template: Duplicate and customize -->
-        <article class="rounded-2xl border bg-white overflow-hidden shadow-sm">
-          <div class="h-40 bg-gray-200"></div>
-          <div class="p-6">
-            <h3 class="font-semibold">Lifeline Hospital Sohar</h3>
-            <p class="text-sm text-gray-700 mt-1">Marketing Coordinator & Corporate Approvals</p>
-            <ul class="mt-3 text-sm text-gray-700 list-disc list-inside space-y-1">
-              <li>Grew qualified inquiries via targeted campaigns</li>
-              <li>Streamlined corporate approval workflows</li>
-              <li>Improved patient onboarding experience</li>
-            </ul>
-            <div class="mt-4 text-xs text-gray-600">Results: Add quant metrics (e.g., +X% inquiries, ↓ lead time)</div>
-          </div>
-        </article>
-
-        <article class="rounded-2xl border bg-white overflow-hidden shadow-sm">
-          <div class="h-40 bg-gray-200"></div>
-          <div class="p-6">
-            <h3 class="font-semibold">Phoenix Builders</h3>
-            <p class="text-sm text-gray-700 mt-1">Business Development Support</p>
-            <ul class="mt-3 text-sm text-gray-700 list-disc list-inside space-y-1">
-              <li>Collateral refresh & outreach coordination</li>
-              <li>Lead pipeline hygiene</li>
-              <li>Stakeholder reporting</li>
-            </ul>
-            <div class="mt-4 text-xs text-gray-600">Results: Add metrics / outcomes here</div>
-          </div>
-        </article>
-
-        <article class="rounded-2xl border bg-white overflow-hidden shadow-sm">
-          <div class="h-40 bg-gray-200"></div>
-          <div class="p-6">
-            <h3 class="font-semibold">Clinic & Medical Camps</h3>
-            <p class="text-sm text-gray-700 mt-1">Coordination & Execution</p>
-            <ul class="mt-3 text-sm text-gray-700 list-disc list-inside space-y-1">
-              <li>Multi-site camp logistics & vendor mgmt</li>
-              <li>On-site operations & safety readiness</li>
-              <li>Post-event reporting & learnings</li>
-            </ul>
-            <div class="mt-4 text-xs text-gray-600">Results: Add attendance/satisfaction metrics</div>
-          </div>
-        </article>
-      </div>
-
-      <div class="mt-8 text-sm text-gray-600">Tip: Convert each card to a full case-study page later.</div>
-    </div>
-  </section>
-
-  <!-- Skills & Certifications -->
-  <section id="skills" class="py-16 md:py-24 bg-white border-t border-gray-100">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-bold">Skills & Certifications</h2>
-
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl border p-6 bg-gray-50">
-          <h3 class="font-semibold">Marketing & Business Development</h3>
-          <ul class="mt-3 list-disc list-inside text-sm text-gray-700 space-y-1">
-            <li>Campaign ops, funnel mgmt</li>
-            <li>Social & content strategy</li>
-            <li>Partner marketing & B2B</li>
-          </ul>
+    <!-- Contact Section -->
+    <section class="section section--dark" id="contact">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Let's Connect</h2>
+                <p class="section__subtitle">Ready to discuss strategic partnerships and business opportunities</p>
+            </div>
+            <div class="contact__content">
+                <div class="contact__info">
+                    <div class="contact__card">
+                        <h3>Direct Contact</h3>
+                        <div class="contact__details">
+                            <a href="mailto:zubin.qayam@outlook.com" class="contact__link">
+                                <span class="contact__icon">✉️</span>
+                                <span>zubin.qayam@outlook.com</span>
+                            </a>
+                            <a href="tel:+96878572706" class="contact__link">
+                                <span class="contact__icon">📞</span>
+                                <span>+968 7857 2706</span>
+                            </a>
+                            <div class="contact__address">
+                                <span class="contact__icon">📍</span>
+                                <span>Sohar, Sultanate of Oman</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact__card">
+                        <h3>Professional Networks</h3>
+                        <div class="contact__social">
+                            <a href="https://linkedin.com/in/zubin-qayam-b22bb7170" target="_blank" rel="noopener noreferrer" class="btn btn--outline">LinkedIn Profile</a>
+                            <a href="https://g.dev/zubinqayam" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Google Developer</a>
+                            <a href="https://zubinlifeline.blogspot.com/" target="_blank" rel="noopener noreferrer" class="btn btn--outline" onclick="window.open(this.href, '_blank'); return false;">Healthcare Blog</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__form">
+                    <form class="form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company" class="form-label">Company</label>
+                            <input type="text" id="company" name="company" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="rounded-2xl border p-6 bg-gray-50">
-          <h3 class="font-semibold">Operations & Management</h3>
-          <ul class="mt-3 list-disc list-inside text-sm text-gray-700 space-y-1">
-            <li>Clinic workflows & SOPs</li>
-            <li>Budgeting & procurement</li>
-            <li>Reporting & dashboards</li>
-          </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p>&copy; 2025 Zubin Qayam. Professional portfolio showcasing business development expertise in Oman's industrial healthcare sector.</p>
+            </div>
         </div>
-        <div class="rounded-2xl border p-6 bg-gray-50">
-          <h3 class="font-semibold">Technical</h3>
-          <ul class="mt-3 list-disc list-inside text-sm text-gray-700 space-y-1">
-            <li>Microsoft 365, Google Workspace</li>
-            <li>Basic CRM (HubSpot/Notion)</li>
-            <li>Docs/Slides design, Canva</li>
-          </ul>
-        </div>
-      </div>
+    </footer>
 
-      <div id="certs" class="mt-10 grid md:grid-cols-2 gap-6">
-        <div class="rounded-2xl border p-6 bg-gray-50">
-          <h3 class="font-semibold">Certifications</h3>
-          <ul class="mt-3 list-disc list-inside text-sm text-gray-700 space-y-1">
-            <li><a class="text-indigo-600 hover:underline" href="https://learn.microsoft.com/en-us/users/me/achievements#badges-section" target="_blank" rel="noopener">Microsoft Learn — Achievements</a></li>
-            <li><a class="text-indigo-600 hover:underline" href="https://g.dev/zubinqayam" target="_blank" rel="noopener">Google Developer Profile</a></li>
-            <li>Upcoming: AMA PCM®, PMI PMP®</li>
-            <li>Healthcare basics: HIPAA awareness (or local equivalent)</li>
-          </ul>
-        </div>
-        <div class="rounded-2xl border p-6 bg-gray-50">
-          <h3 class="font-semibold">Verification Links</h3>
-          <ul class="mt-3 list-disc list-inside text-sm text-gray-700 space-y-1">
-          <li><a class="text-indigo-600 hover:underline" href="https://learn.microsoft.com/en-us/users/me/achievements#badges-section" target="_blank" rel="noopener">Microsoft Learn — Badges</a></li>
-          <li><a class="text-indigo-600 hover:underline" href="https://g.dev/zubinqayam" target="_blank" rel="noopener">Google Developer Profile</a></li>
-        </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-16 md:py-24">
-    <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-bold">Get in Touch</h2>
-      <p class="mt-2 text-gray-700">Let’s collaborate. I’m open to roles and projects in healthcare and corporate marketing/operations.</p>
-
-      <form class="mt-8 grid gap-4" action="mailto:zubin.qayam@outlook.com" method="post" enctype="text/plain">
-        <div class="grid md:grid-cols-2 gap-4">
-          <input required name="name" placeholder="Name" class="w-full rounded-xl border px-4 py-3" />
-          <input required type="email" name="email" placeholder="Email" class="w-full rounded-xl border px-4 py-3" />
-        </div>
-        <textarea required name="message" placeholder="Message" rows="5" class="w-full rounded-xl border px-4 py-3"></textarea>
-        <button type="submit" class="rounded-xl bg-indigo-600 text-white px-5 py-3 text-sm shadow hover:bg-indigo-500 w-max">Send</button>
-      </form>
-
-      <div class="mt-6 flex items-center gap-4 text-sm">
-        <a class="text-indigo-600 hover:underline" href="mailto:zubin.qayam@outlook.com">zubin.qayam@outlook.com</a>
-        <a class="text-indigo-600 hover:underline" href="https://www.linkedin.com/in/zubin-qayam-p-m-b22bb7170" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="text-indigo-600 hover:underline" href="https://g.dev/zubinqayam" target="_blank" rel="noopener">Google Dev</a>
-        <!-- Optional phone number link -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="border-t border-gray-200 bg-white">
-    <div class="max-w-7xl mx-auto px-4 py-10 text-sm text-gray-600 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p>© 2025 Zubin Qayam. All rights reserved. <span class="text-gray-400">ZQ AI LOGIC™ (Proprietary)</span></p>
-      <nav class="flex gap-4">
-        <a href="#home" class="hover:text-gray-900">Home</a>
-        <a href="#about" class="hover:text-gray-900">About</a>
-        <a href="#projects" class="hover:text-gray-900">Projects</a>
-        <a href="#skills" class="hover:text-gray-900">Skills</a>
-        <a href="#contact" class="hover:text-gray-900">Contact</a>
-      </nav>
-    </div>
-  </footer>
-
-<!-- ZQ: Certifications & Badges (v1.1) -->
-<section id="certs-badges" style="margin:48px 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;">
-
-<!-- ZQ: Microsoft Learn callout (v1.2) -->
-<div id="ms-learn-callout" style="border:1px solid #e5e7eb;border-radius:14px;padding:18px;margin:18px 0;display:flex;gap:16px;align-items:center;flex-wrap:wrap;">
-  <img src="ZQ_ms_learn_badge.png" alt="Microsoft Learn — Achievements" style="width:360px;max-width:100%;border-radius:12px;">
-  <div style="min-width:260px;flex:1;">
-    <div style="font-weight:700;font-size:22px;line-height:1.2;margin-bottom:6px;">Verify Microsoft Achievements</div>
-    <p style="color:#555;margin:0 0 10px;">This is a live, auto-updating badge wall hosted by Microsoft Learn.</p>
-    <a href="https://learn.microsoft.com/en-us/users/me/achievements#badges-section" target="_blank" rel="noopener" 
-       style="display:inline-block;background:#0078D4;color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;">
-       View Live Badges
-    </a>
-  </div>
-</div>
-
-  <h2 style="font-size:28px; margin-bottom:16px;">Certifications & Badges</h2>
-  <p style="color:#555; margin-bottom:16px;">Click any badge to verify or view details.</p>
-
-  <div style="display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:14px;">
-    <!-- Microsoft Learn Achievements -->
-    <a href="https://learn.microsoft.com/en-us/users/me/achievements#badges-section" target="_blank" rel="noopener noreferrer" 
-       style="text-decoration:none;border:1px solid #e5e7eb;border-radius:12px;padding:14px;display:flex;align-items:center;gap:12px;">
-      <img src="https://cdn.simpleicons.org/microsoft/0078D4" alt="Microsoft" width="28" height="28"/>
-      <div>
-        <div style="font-weight:600;color:#111;">Microsoft Learn — Achievements</div>
-        <div style="font-size:12px;color:#6b7280;">Live badge wall</div>
-      </div>
-    </a>
-
-    <!-- Google Developer Profile -->
-    <a href="https://g.dev/zubinqayam" target="_blank" rel="noopener noreferrer" 
-       style="text-decoration:none;border:1px solid #e5e7eb;border-radius:12px;padding:14px;display:flex;align-items:center;gap:12px;">
-      <img src="https://cdn.simpleicons.org/google/4285F4" alt="Google" width="28" height="28"/>
-      <div>
-        <div style="font-weight:600;color:#111;">Google Developer Profile</div>
-        <div style="font-size:12px;color:#6b7280;">Projects • Code • Links</div>
-      </div>
-    </a>
-
-    <!-- HubSpot Inbound Marketing -->
-    <a href="https://academy.hubspot.com/certification/inbound-marketing" target="_blank" rel="noopener noreferrer"
-       style="text-decoration:none;border:1px solid #e5e7eb;border-radius:12px;padding:14px;display:flex;align-items:center;gap:12px;">
-      <img src="https://img.shields.io/badge/HubSpot-Inbound%20Marketing-ff7a59?logo=hubspot&logoColor=white" alt="HubSpot Inbound Marketing" 
-           style="border-radius:8px; height:28px;">
-      <div>
-        <div style="font-weight:600;color:#111;">HubSpot — Inbound Marketing</div>
-        <div style="font-size:12px;color:#6b7280;">Issued: Jun 2025 · Expires: Jul 2027</div>
-      </div>
-    </a>
-
-    <!-- HubSpot Contextual Marketing -->
-    <a href="https://academy.hubspot.com/certification/contextual-marketing" target="_blank" rel="noopener noreferrer"
-       style="text-decoration:none;border:1px solid #e5e7eb;border-radius:12px;padding:14px;display:flex;align-items:center;gap:12px;">
-      <img src="https://img.shields.io/badge/HubSpot-Contextual%20Marketing-ff7a59?logo=hubspot&logoColor=white" alt="HubSpot Contextual Marketing" 
-           style="border-radius:8px; height:28px;">
-      <div>
-        <div style="font-weight:600;color:#111;">HubSpot — Contextual Marketing</div>
-        <div style="font-size:12px;color:#6b7280;">Issued: Jun 2025 · Expires: Jul 2026</div>
-      </div>
-    </a>
-
-    <!-- LinkedIn Learning: Copilot in Teams -->
-    <a href="https://www.linkedin.com/learning/" target="_blank" rel="noopener noreferrer"
-       style="text-decoration:none;border:1px solid #e5e7eb;border-radius:12px;padding:14px;display:flex;align-items:center;gap:12px;">
-      <img src="https://img.shields.io/badge/LinkedIn%20Learning-Copilot%20in%20Teams-0A66C2?logo=linkedin&logoColor=white" alt="Copilot in Teams" 
-           style="border-radius:8px; height:28px;">
-      <div>
-        <div style="font-weight:600;color:#111;">Copilot in Teams: AI‑Powered Collaboration</div>
-        <div style="font-size:12px;color:#6b7280;">Issued: Jun 2025</div>
-      </div>
-    </a>
-
-    <!-- LinkedIn Learning: Business Dev Planning -->
-    <a href="https://www.linkedin.com/learning/" target="_blank" rel="noopener noreferrer"
-       style="text-decoration:none;border:1px solid #e5e7eb;border-radius:12px;padding:14px;display:flex;align-items:center;gap:12px;">
-      <img src="https://img.shields.io/badge/LinkedIn%20Learning-Business%20Dev%20Strategy-0A66C2?logo=linkedin&logoColor=white" alt="Business Dev Strategy" 
-           style="border-radius:8px; height:28px;">
-      <div>
-        <div style="font-weight:600;color:#111;">Business Development: Strategic Planning</div>
-        <div style="font-size:12px;color:#6b7280;">Issued: Jun 2025</div>
-      </div>
-    </a>
-
-    <!-- In‑Progress badges -->
-    <div style="border:1px dashed #d1d5db;border-radius:12px;padding:14px;display:flex;align-items:center;gap:12px;">
-      <img src="https://img.shields.io/badge/In%20Progress-AMA%20PCM®-111827" alt="AMA PCM In Progress" style="border-radius:8px; height:28px;">
-      <div>
-        <div style="font-weight:600;color:#111;">AMA PCM® — Digital Marketing</div>
-        <div style="font-size:12px;color:#6b7280;">Studying — target: Q4 2025</div>
-      </div>
-    </div>
-
-    <div style="border:1px dashed #d1d5db;border-radius:12px;padding:14px;display:flex;align-items:center;gap:12px;">
-      <img src="https://img.shields.io/badge/In%20Progress-PMP®/CAPM®-111827" alt="PMP or CAPM In Progress" style="border-radius:8px; height:28px;">
-      <div>
-        <div style="font-weight:600;color:#111;">PMI — PMP®/CAPM®</div>
-        <div style="font-size:12px;color:#6b7280;">Target: Q2 2026</div>
-      </div>
-    </div>
-
-    <div style="border:1px dashed #d1d5db;border-radius:12px;padding:14px;display:flex;align-items:center;gap:12px;">
-      <img src="https://img.shields.io/badge/In%20Progress-GA4-111827" alt="GA4 In Progress" style="border-radius:8px; height:28px;">
-      <div>
-        <div style="font-weight:600;color:#111;">Google Analytics 4 — Certification</div>
-        <div style="font-size:12px;color:#6b7280;">Target: Q4 2025</div>
-      </div>
-    </div>
-
-    <div style="border:1px dashed #d1d5db;border-radius:12px;padding:14px;display:flex;align-items:center;gap:12px;">
-      <img src="https://img.shields.io/badge/In%20Progress-HL7®%20FHIR®%20Fundamentals-111827" alt="HL7 FHIR Fundamentals In Progress" style="border-radius:8px; height:28px;">
-      <div>
-        <div style="font-weight:600;color:#111;">HL7® FHIR® Fundamentals</div>
-        <div style="font-size:12px;color:#6b7280;">Target: Q1 2026</div>
-      </div>
-    </div>
-  </div>
-</section>
-
+    <script src="app.js"></script>
 </body>
 </html>
