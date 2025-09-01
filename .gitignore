@@ -1,0 +1,15 @@
+# Dependency directories
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Security scan results
+results.sarif
+*.sarif
+
+# Temporary files
+.DS_Store
+*.log
+*.tmp

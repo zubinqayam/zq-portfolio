@@ -1,0 +1,30 @@
+name: SBOM Generation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  sbom-scan:
+    runs-on: ubuntu-latest
+    name: Generate SBOM and scan for vulnerabilities
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Generate SBOM and scan
+        uses: anchore/scan-action@v3
+        with:
+          path: .
+          output-format: sarif
+          fail-build: true
+          severity-cutoff: medium
+          
+      - name: Upload SARIF results
+        uses: github/codeql-action/upload-sarif@v2
+        if: always()
+        with:
+          sarif_file: results.sarif
