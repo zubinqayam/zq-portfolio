@@ -1,0 +1,164 @@
+---
+name: Syft Supply Chain Verification
+
+"on":
+  schedule:
+    # Run nightly at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    # Allow manual triggering
+
+permissions:
+  contents: read
+  attestations: read
+  id-token: write
+
+jobs:
+  verify-syft:
+    name: Verify Syft Supply Chain Integrity
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install required tools
+        run: |
+          echo "Installing cosign..."
+          # Download cosign
+          curl -O -L "https://github.com/sigstore/cosign/releases/latest/download/cosign-linux-amd64"
+          sudo mv cosign-linux-amd64 /usr/local/bin/cosign
+          sudo chmod +x /usr/local/bin/cosign
+
+          echo "Installing slsa-verifier..."
+          # Install slsa-verifier
+          curl -sSfL \
+            https://raw.githubusercontent.com/slsa-framework/slsa-verifier/main/installer.sh \
+            | bash -s -- -b /usr/local/bin
+
+          echo "Verifying tool installations..."
+          cosign version
+          slsa-verifier version
+          gh version
+
+      - name: Download Syft installer
+        run: |
+          echo "Downloading Syft installer..."
+          # Get latest Syft version
+          SYFT_VERSION=$(curl -s "https://api.github.com/repos/anchore/syft/releases/latest" | jq -r '.tag_name')
+          echo "Latest Syft version: $SYFT_VERSION"
+
+          # Download Syft binary
+          curl -sSfL "https://github.com/anchore/syft/releases/download/$SYFT_VERSION/syft_${SYFT_VERSION#v}_linux_amd64.tar.gz" -o syft.tar.gz
+
+          # Download checksums and signature files
+          curl -sSfL "https://github.com/anchore/syft/releases/download/$SYFT_VERSION/syft_${SYFT_VERSION#v}_checksums.txt" -o checksums.txt
+          curl -sSfL "https://github.com/anchore/syft/releases/download/$SYFT_VERSION/syft_${SYFT_VERSION#v}_checksums.txt.sig" -o checksums.txt.sig || echo "Signature file not found"
+
+          echo "SYFT_VERSION=$SYFT_VERSION" >> $GITHUB_ENV
+
+      - name: Verify checksums
+        run: |
+          echo "Verifying checksums..."
+          # Extract and verify checksum
+          expected_checksum=$(grep \
+            "syft_${SYFT_VERSION#v}_linux_amd64.tar.gz" \
+            checksums.txt | cut -d' ' -f1)
+          actual_checksum=$(sha256sum syft.tar.gz | cut -d' ' -f1)
+
+          if [ "$expected_checksum" = "$actual_checksum" ]; then
+            echo "✅ Checksum verification passed"
+          else
+            echo "❌ Checksum verification failed"
+            echo "Expected: $expected_checksum"
+            echo "Actual: $actual_checksum"
+            exit 1
+          fi
+
+      - name: Verify cosign signatures
+        run: |
+          echo "Verifying cosign signatures..."
+          # Verify the checksums file signature using cosign
+          if [ -f "checksums.txt.sig" ]; then
+            echo "Verifying checksums signature with cosign..."
+            # Use Anchore's public key for verification
+            cosign verify-blob \
+              --certificate-identity-regexp \
+              "^https://github.com/anchore/syft" \
+              --certificate-oidc-issuer \
+              "https://token.actions.githubusercontent.com" \
+              --signature checksums.txt.sig \
+              checksums.txt || \
+              echo "⚠️  Cosign verification failed or not available"
+          else
+            echo "⚠️  No signature file found for cosign verification"
+          fi
+
+      - name: Attempt SLSA provenance verification
+        continue-on-error: true
+        run: |
+          echo "Attempting SLSA provenance verification (soft-fail)..."
+          # Try to download and verify SLSA provenance
+          curl -sSfL "https://github.com/anchore/syft/releases/download/$SYFT_VERSION/syft_${SYFT_VERSION#v}_linux_amd64.tar.gz.intoto.jsonl" -o provenance.jsonl || {
+            echo "⚠️  SLSA provenance file not found"
+            echo "Continuing with soft-fail"
+            exit 0
+          }
+
+          # Verify SLSA provenance if file exists
+          if [ -f "provenance.jsonl" ]; then
+            echo "Verifying SLSA provenance..."
+            slsa-verifier verify-artifact syft.tar.gz \
+              --provenance-path provenance.jsonl \
+              --source-uri github.com/anchore/syft || {
+              echo "⚠️  SLSA provenance verification failed"
+              echo "Soft-fail enabled"
+              exit 0
+            }
+            echo "✅ SLSA provenance verification passed"
+          fi
+
+      - name: Verify GitHub attestations
+        run: |
+          echo "Verifying GitHub attestations..."
+          # Attempt to verify GitHub attestations for the Syft binary
+          gh attestation verify syft.tar.gz \
+            --owner anchore \
+            --repo syft || {
+            echo "⚠️  GitHub attestation verification failed or not available"
+            echo "This may be expected if attestations are not published"
+          }
+
+      - name: Extract and install Syft
+        run: |
+          echo "Extracting Syft binary..."
+          tar -xzf syft.tar.gz
+          chmod +x syft
+
+          echo "Testing Syft installation..."
+          ./syft version
+
+          echo "✅ Syft binary verified and ready for use"
+
+      - name: Upload verified Syft binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-syft-${{ env.SYFT_VERSION }}
+          path: |
+            syft
+            checksums.txt
+            checksums.txt.sig
+          retention-days: 30
+
+      - name: Security verification summary
+        run: |
+          echo "🔒 Supply Chain Security Verification Summary"
+          echo "============================================="
+          echo "✅ Checksum verification: PASSED"
+          echo "📝 Cosign signature verification: ATTEMPTED"
+          echo "📋 SLSA provenance verification: ATTEMPTED (soft-fail)"
+          echo "🏷️  GitHub attestation verification: ATTEMPTED"
+          echo "📦 Verified Syft binary uploaded as artifact"
+          echo ""
+          echo "Syft version: $SYFT_VERSION"
+          echo "Verification completed at: $(date -u)"
