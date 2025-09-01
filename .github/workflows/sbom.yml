@@ -1,0 +1,97 @@
+name: SBOM Generation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  release:
+    types: [ published ]
+  schedule:
+    # Generate SBOM weekly on Mondays at 8 AM UTC
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+
+jobs:
+  generate-sbom:
+    runs-on: ubuntu-latest
+    name: Generate Software Bill of Materials
+    permissions:
+      contents: read
+      actions: read
+      id-token: write
+      attestations: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Generate SBOM with Syft
+        uses: anchore/sbom-action@v0
+        with:
+          path: ./
+          format: spdx-json
+          output-file: sbom.spdx.json
+          
+      - name: Generate CycloneDX SBOM
+        uses: anchore/sbom-action@v0
+        with:
+          path: ./
+          format: cyclonedx-json
+          output-file: sbom.cyclonedx.json
+          
+      - name: Attest SBOM
+        if: github.event_name == 'release'
+        uses: actions/attest-sbom@v1
+        with:
+          subject-path: './sbom.spdx.json'
+          sbom-path: './sbom.spdx.json'
+          
+      - name: Upload SBOM Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sbom-${{ github.sha }}
+          path: |
+            sbom.spdx.json
+            sbom.cyclonedx.json
+          retention-days: 90
+          
+      - name: Vulnerability Scan
+        uses: anchore/scan-action@v3
+        with:
+          path: "."
+          format: sarif
+          output-file: vulnerabilities.sarif
+          
+      - name: Upload Vulnerability SARIF
+        if: always()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: vulnerabilities.sarif
+          category: anchore-syft
+        continue-on-error: true
+        
+      - name: SBOM Summary
+        if: always()
+        run: |
+          echo "📦 SBOM Generation Complete"
+          echo "📊 Supply Chain Security Details:"
+          echo "- Repository: ${{ github.repository }}"
+          echo "- Branch: ${{ github.ref_name }}"
+          echo "- Commit: ${{ github.sha }}"
+          echo "- Trigger: ${{ github.event_name }}"
+          echo ""
+          echo "Generated Files:"
+          if [[ -f "sbom.spdx.json" ]]; then
+            echo "✅ SPDX SBOM: sbom.spdx.json"
+            echo "   - Components: $(jq '.packages | length' sbom.spdx.json 2>/dev/null || echo 'N/A')"
+          fi
+          if [[ -f "sbom.cyclonedx.json" ]]; then
+            echo "✅ CycloneDX SBOM: sbom.cyclonedx.json"
+          fi
+          if [[ -f "vulnerabilities.sarif" ]]; then
+            echo "✅ Vulnerability scan: vulnerabilities.sarif"
+          fi
+          echo ""
+          echo "🔒 ZQTaskmaster Security: SBOM generation integrated"
+          echo "Supply chain transparency enabled for compliance and security"

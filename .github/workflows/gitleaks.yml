@@ -1,0 +1,61 @@
+name: Gitleaks Secret Scanning
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Run secret scan daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  gitleaks:
+    runs-on: ubuntu-latest
+    name: Secret Scan
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch full history for comprehensive scanning
+          
+      - name: Run Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
+          
+      - name: Upload Gitleaks SARIF
+        if: always()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: results.sarif
+          category: gitleaks
+        continue-on-error: true
+        
+      - name: Gitleaks Results Summary
+        if: always()
+        run: |
+          echo "🔍 Gitleaks Secret Scanning Complete"
+          echo "📊 Scan Details:"
+          echo "- Repository: ${{ github.repository }}"
+          echo "- Branch: ${{ github.ref_name }}"
+          echo "- Commit: ${{ github.sha }}"
+          echo "- Scan Type: ${{ github.event_name }}"
+          echo ""
+          echo "🔒 ZQTaskmaster Security: Secret scanning integrated"
+          echo "Results available in Security tab → Code scanning alerts"
+          
+          if [[ -f "results.sarif" ]]; then
+            echo "📄 SARIF results file generated"
+          fi
+          
+      - name: Security Notification
+        if: failure()
+        run: |
+          echo "⚠️  SECRET DETECTION ALERT"
+          echo "Potential secrets detected in repository!"
+          echo "Please review the Security tab for details."
+          echo "Do not commit sensitive information to version control."
