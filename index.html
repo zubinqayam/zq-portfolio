@@ -1,4 +1,99 @@
 <!-- ============================
    ZQ Portfolio – Polished Head
    ============================ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Charset + viewport (CRA baseline) -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- ===== Title (React can override at runtime) ===== -->
+    <title>Zubin Qayam | Portfolio</title>
+
+    <!-- ===== Canonical (use your public page URL) ===== -->
+    <link rel="canonical" href="https://zubinqayam.github.io/zq-portfolio/" />
+    <!-- Canonical is a best practice to de-duplicate URLs. -->
+    <!-- refs: Google Search docs on rel=canonical. :contentReference[oaicite:0]{index=0} -->
+
+    <!-- ===== Meta description (keep ~155–160 chars) ===== -->
+    <meta
+      name="description"
+      content="Zubin Qayam — Business Development & Marketing Executive in Oman's industrial healthcare ecosystem. Strategic partnerships across Sohar Freezone, Sohar Port & Shinas Port; Vision 2040 aligned."
+    />
+
+    <!-- ===== Open Graph for rich shares (FB/LinkedIn/etc.) ===== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Zubin Qayam | Portfolio" />
+    <meta
+      property="og:description"
+      content="Driving corporate partnerships and healthcare integration for Oman Vision 2040."
+    />
+    <meta property="og:url" content="https://zubinqayam.github.io/zq-portfolio/" />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
+    <!-- OG best practices: concise title/desc; proper image dimensions. :contentReference[oaicite:1]{index=1} -->
+
+    <!-- ===== Twitter Card (X) ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Zubin Qayam | Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Strategic business development in Oman's industrial healthcare sector."
+    />
+    <meta name="twitter:image" content="%PUBLIC_URL%/og-image.png" />
+    <!-- Twitter cards fall back to OG when tags overlap. :contentReference[oaicite:2]{index=2} -->
+
+    <!-- ===== Theme color (browser UI) ===== -->
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- ===== Favicon / App Manifest ===== -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- ===== Preconnect (optional: fonts/CDN) ===== -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+
+    <!-- ===== JSON-LD (Person) ===== -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Zubin Qayam",
+        "jobTitle": "Corporate Business Development & Marketing Executive",
+        "email": "mailto:zubin.qayam@outlook.com",
+        "telephone": "+96878572706",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sohar, Oman"
+        },
+        "url": "https://zubinqayam.github.io/zq-portfolio/",
+        "sameAs": [
+          "https://www.linkedin.com/in/zubin-qayam-p-m-b22bb7170/",
+          "https://developers.google.com/profile/u/zubinqayam",
+          "https://www.credly.com/users/zubin-qayam/badges"
+        ]
+      }
+    </script>
+    <!-- Person JSON-LD pattern per schema.org. :contentReference[oaicite:3]{index=3} -->
+
+    <!-- ===== Robots (public) ===== -->
+    <meta name="robots" content="index,follow" />
+
+    <!-- CRA note: scripts are injected at build; keep head lean. -->
+    <!-- CRA public file behavior: tweak title/meta here; bundle scripts auto-injected. :contentReference[oaicite:4]{index=4} -->
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <!-- Optional: simple inline style to ensure white flash is minimal -->
+    <style>
+      html, body, #root { height: 100%; }
+      body { background: #fff; }
+    </style>
+  </body>
+</html>
+
 
