@@ -1,0 +1,41 @@
+# Code Owners for ZQ Portfolio
+
+# Global ownership - Zubin Qayam owns all files by default
+* @zubinqayam
+
+# GitHub workflows and governance require approval from owner
+/.github/ @zubinqayam
+/.github/workflows/ @zubinqayam
+/.github/CODEOWNERS @zubinqayam
+/.github/SECURITY.md @zubinqayam
+/.github/dependabot.yml @zubinqayam
+
+# Core portfolio files require owner approval
+/index.html @zubinqayam
+/README.md @zubinqayam
+/style.css @zubinqayam
+/app.js @zubinqayam
+
+# Assets and media files
+*.png @zubinqayam
+*.jpg @zubinqayam
+*.jpeg @zubinqayam
+*.gif @zubinqayam
+*.svg @zubinqayam
+
+# Configuration files
+*.json @zubinqayam
+*.yml @zubinqayam
+*.yaml @zubinqayam
+*.toml @zubinqayam
+*.env @zubinqayam
+
+# Documentation requires owner review
+*.md @zubinqayam
+
+# ZQTaskmaster governance files - require strict approval
+/.github/workflows/orchestrator.yml @zubinqayam
+/.github/workflows/zq-labels.yml @zubinqayam
+/.github/workflows/codeql.yml @zubinqayam
+/.github/workflows/gitleaks.yml @zubinqayam
+/.github/workflows/sbom.yml @zubinqayam

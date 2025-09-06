@@ -1,0 +1,91 @@
+name: ZQ Labels Bootstrap
+
+on:
+  workflow_dispatch:
+    inputs:
+      force_update:
+        description: 'Force update existing labels'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  bootstrap-labels:
+    runs-on: ubuntu-latest
+    name: Bootstrap Repository Labels
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install GitHub CLI
+        run: |
+          if ! command -v gh &> /dev/null; then
+            curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+            echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+            sudo apt update
+            sudo apt install gh
+          fi
+          
+      - name: Authenticate GitHub CLI
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+        
+      - name: Create Standard Labels
+        run: |
+          echo "🏷️ Creating ZQTaskmaster standard labels..."
+          
+          # Define labels with colors and descriptions
+          declare -A labels=(
+            ["approval"]="28a745:Required approval gate"
+            ["security"]="d73a49:Security-related issues"
+            ["governance"]="0366d6:Governance and compliance"
+            ["dependencies"]="fbca04:Dependency updates"
+            ["automation"]="7057ff:Automation and CI/CD"
+            ["enhancement"]="a2eeef:Feature enhancement"
+            ["bug"]="d73a49:Something isn't working"
+            ["documentation"]="0075ca:Documentation improvements"
+            ["priority:high"]="b60205:High priority"
+            ["priority:medium"]="fbca04:Medium priority" 
+            ["priority:low"]="0e8a16:Low priority"
+            ["status:review"]="fef2c0:Under review"
+            ["status:blocked"]="d4c5f9:Blocked"
+            ["status:ready"]="0e8a16:Ready for work"
+          )
+          
+          for label in "${!labels[@]}"; do
+            IFS=':' read -r color description <<< "${labels[$label]}"
+            
+            if ${{ github.event.inputs.force_update }}; then
+              echo "Creating/updating label: $label"
+              gh label create "$label" --color "$color" --description "$description" --force || true
+            else
+              echo "Creating label: $label"
+              gh label create "$label" --color "$color" --description "$description" || echo "Label $label may already exist"
+            fi
+          done
+          
+      - name: Apply Approval Label
+        run: |
+          echo "🏷️ Applying approval label to current PR..."
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            gh pr edit ${{ github.event.number }} --add-label "approval"
+          fi
+          
+      - name: Label Bootstrap Summary
+        run: |
+          echo "✅ ZQ Labels Bootstrap Complete"
+          echo "📊 Standard labels created:"
+          echo "- Approval & governance labels"
+          echo "- Security & automation labels"
+          echo "- Priority & status labels"
+          echo "- Enhancement & bug labels"
+          echo ""
+          echo "Next steps:"
+          echo "1. Labels are now available for PR management"
+          echo "2. Trigger 'ZQTaskmaster Orchestrator' manual run"
+          echo "3. Configure SMTP secrets for email reminders (optional)"
