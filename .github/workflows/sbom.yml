@@ -1,30 +1,24 @@
-name: SBOM Generation
+<!DOCTYPE html>
+<html lang="en">
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+  <title>Zubin Qayam | Corporate BD & Marketing Professional</title>
+  <meta name="description" content="Corporate business development and marketing professional focused on Oman's industrial healthcare ecosystem" />
+  <meta name="author" content="Zubin Qayam" />
 
-jobs:
-  sbom-scan:
-    runs-on: ubuntu-latest
-    name: Generate SBOM and scan for vulnerabilities
-    
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        
-      - name: Generate SBOM and scan
-        uses: anchore/scan-action@v3
-        with:
-          path: .
-          output-format: sarif
-          fail-build: true
-          severity-cutoff: medium
-          
-      - name: Upload SARIF results
-        uses: github/codeql-action/upload-sarif@v2
-        if: always()
-        with:
-          sarif_file: results.sarif
+  <meta property="og:title" content="Zubin Qayam | Corporate BD & Marketing Professional" />
+  <meta property="og:description" content="Corporate business development and marketing professional focused on Oman's industrial healthcare ecosystem" />
+  <meta property="og:type" content="website" />
+
+  <script type="module" crossorigin src="/assets/index-CVx3cGMX.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CrW1aAFj.css">
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>
