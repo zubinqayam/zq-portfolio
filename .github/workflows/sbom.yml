@@ -57,9 +57,10 @@ jobs:
           retention-days: 90
           
       - name: Vulnerability Scan
+        if: ${{ hashFiles('sbom.spdx.json') != '' }}
         uses: anchore/scan-action@v3
         with:
-          path: "."
+          path: sbom.spdx.json
           format: sarif
           output-file: vulnerabilities.sarif
           
