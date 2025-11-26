@@ -1,6 +1,6 @@
 # Shadcn-UI Template Usage Instructions
 
-## technology stack
+## Technology Stack
 
 This project is built with:
 
@@ -11,6 +11,23 @@ This project is built with:
 - Tailwind CSS
 
 All shadcn/ui components have been downloaded under `@/components/ui`.
+
+## Related Projects & Technologies
+
+### Windows Community Toolkit
+
+This portfolio also references experience with the [Windows Community Toolkit](https://github.com/CommunityToolkit/Windows), a collection of controls, helpers, and extensions for building modern Windows applications.
+
+The toolkit supports:
+- **WinUI 2** (UWP)
+- **WinUI 3** (Windows App SDK)
+- **Uno Platform** (cross-platform)
+
+Key components include advanced UI controls (DataGrid, Expander, GridSplitter, Carousel), helper libraries for common development tasks, and animation/behavior extensions.
+
+For more information:
+- [GitHub Repository](https://github.com/CommunityToolkit/Windows)
+- [Microsoft Learn Documentation](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/windows/)
 
 ## File Structure
 
