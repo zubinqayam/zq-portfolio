@@ -16,14 +16,17 @@ All shadcn/ui components have been downloaded under `@/components/ui`.
 
 ### Windows Community Toolkit
 
-This portfolio also references experience with the [Windows Community Toolkit](https://github.com/CommunityToolkit/Windows), a collection of controls, helpers, and extensions for building modern Windows applications.
+The [Windows Community Toolkit](https://github.com/CommunityToolkit/Windows) is a collection of controls, helpers, and extensions for building modern Windows applications.
 
 The toolkit supports:
 - **WinUI 2** (UWP)
 - **WinUI 3** (Windows App SDK)
 - **Uno Platform** (cross-platform)
 
-Key components include advanced UI controls (DataGrid, Expander, GridSplitter, Carousel), helper libraries for common development tasks, and animation/behavior extensions.
+Key components include:
+- Advanced UI controls (DataGrid, Expander, GridSplitter, Carousel)
+- Helper libraries for common development tasks
+- Animation and behavior extensions
 
 For more information:
 - [GitHub Repository](https://github.com/CommunityToolkit/Windows)
