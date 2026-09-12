@@ -1,68 +1,107 @@
-# Shadcn-UI Template Usage Instructions
+# ZQ Labs Portfolio
 
-## technology stack
+## Corporate BD, Healthcare Operations & Smart Industry
 
-This project is built with:
+This portfolio presents the professional focus of **Zubin Qayam**, a Healthcare Business Development & Marketing professional exploring AI-enabled workflow systems, automation, corporate medical services, occupational health, and industrial workforce solutions.
+
+**Advancing Health & Industry Through Smart Technology.**
+
+## Why This Project Exists
+
+The site is a working portfolio for communicating professional experience, project interests, and early technical explorations at the intersection of healthcare business development, industrial operations, and responsible automation.
+
+## What It Shows
+
+- Professional positioning and business-development context
+- Healthcare and occupational-health interests
+- Industrial workforce and smart-operations concepts
+- AI workflow, dashboard, and automation explorations
+- Selected visual work and portfolio material
+
+## Professional Context
+
+ZQ Labs is a personal innovation workspace. The projects represented here may be research systems, prototypes, experiments, or early-stage implementation work. The portfolio is intended to make the work understandable to professional and technical audiences without implying customer deployment or clinical validation.
+
+## Current Status
+
+**Prototype** — active portfolio development and presentation work.
+
+The site’s content, visual assets, and project descriptions should be reviewed periodically for accuracy, privacy, and claim scope.
+
+## Architecture
+
+This repository is a client-side Vite application using React and TypeScript. It uses shadcn/ui-style components, Tailwind CSS, and supporting UI libraries from the package manifest. The main application entry points are `App.tsx`, `main.tsx`, and `index.html`.
+
+## Tech Stack
+
+Verified from `package.json` and the repository structure:
 
 - Vite
-- TypeScript
 - React
-- shadcn-ui
+- TypeScript
 - Tailwind CSS
+- shadcn/ui and Radix UI components
+- Framer Motion
+- Recharts
+- Lucide React
 
-All shadcn/ui components have been downloaded under `@/components/ui`.
+## How to Run
 
-## File Structure
+Prerequisite: Node.js and pnpm.
 
-- `index.html` - HTML entry point
-- `vite.config.ts` - Vite configuration file
-- `tailwind.config.js` - Tailwind CSS configuration file
-- `package.json` - NPM dependencies and scripts
-- `src/app.tsx` - Root component of the project
-- `src/main.tsx` - Project entry point
-- `src/index.css` - Existing CSS configuration
-- `src/pages/Index.tsx` - Home page logic
+Install dependencies:
 
-## Components
-
-- All shadcn/ui components are pre-downloaded and available at `@/components/ui`
-
-## Styling
-
-- Add global styles to `src/index.css` or create new CSS files as needed
-- Use Tailwind classes for styling components
-
-## Development
-
-- Import components from `@/components/ui` in your React components
-- Customize the UI by modifying the Tailwind configuration
-
-## Note
-
-- The `@/` path alias points to the `src/` directory
-- In your typescript code, don't re-export types that you're already importing
-
-# Commands
-
-**Install Dependencies**
-
-```shell
-pnpm i
+```bash
+pnpm install
 ```
 
-**Add Dependencies**
+Start the local development server:
 
-```shell
-pnpm add some_new_dependency
-
-**Start Preview**
-
-```shell
+```bash
 pnpm run dev
 ```
 
-**To build**
+Create a production build:
 
-```shell
+```bash
 pnpm run build
 ```
+
+Run the configured linter:
+
+```bash
+pnpm run lint
+```
+
+## Verification
+
+- Build status: currently fails because `index.html` references missing absolute `/assets` bundles; verify locally before release.
+- Test status: no dedicated test script is currently defined in `package.json`.
+- Lint status: currently fails because the configured script targets a missing `./src` directory.
+- CI status: requires repository workflow review.
+- Known limitations: portfolio content and visual assets require ongoing review; the site is not a healthcare delivery or clinical decision system.
+
+## Safety / Privacy Notes
+
+- Use demo, synthetic, or publicly available data only.
+- Do not include patient data, confidential client data, hospital internal records, OP numbers, or insurance information.
+- Do not commit passwords, API keys, private keys, tokens, or real `.env` files.
+- Do not publish corporate contact data, pricing, proposals, contracts, or WhatsApp exports.
+- This portfolio does not establish clinical validation, regulatory approval, customer deployment, or production readiness.
+
+## Links
+
+- [GitHub profile](https://github.com/zubinqayam)
+- [LinkedIn](https://www.linkedin.com/in/zubin-qayam-p-m-b22bb7170)
+- [ZQ Labs GitHub profile README](https://github.com/zubinqayam/Zubin-Qayam)
+
+## Roadmap
+
+- Refine project summaries and evidence links.
+- Add approved screenshots and demonstrations using safe data.
+- Record verification status for featured projects.
+- Keep professional claims aligned with documented experience and repository evidence.
+
+## License
+
+License status should be confirmed before external distribution. See the repository files and GitHub license metadata for the current project terms.
