@@ -36,7 +36,7 @@ The site's content, visual assets, and project descriptions should be reviewed p
 
 ## Architecture
 
-This repository is a client-side Vite application using React and TypeScript. It uses shadcn/ui-style components, Tailwind CSS, and supporting UI libraries from the package manifest. The main application entry points are `App.tsx`, `main.tsx`, and `index.html`.
+This repository contains a root client-side Vite portfolio application and an isolated Python subsystem under `xv1/`. The frontend uses React and TypeScript, shadcn/ui-style components, Tailwind CSS, and supporting UI libraries from the package manifest. Its main entry points are `App.tsx`, `main.tsx`, and `index.html`.
 
 ## Tech Stack
 
@@ -81,7 +81,7 @@ pnpm run lint
 
 ## Verification
 
-- Build status: currently fails because `index.html` references missing absolute `/assets` bundles; verify locally before release.
+- Build/runtime status: the local page currently cannot load because `index.html` references missing absolute `/assets` bundles. Verify `pnpm run dev` and the build output locally before release.
 - Test status: no dedicated test script is currently defined in `package.json`.
 - Lint status: currently fails because the configured script targets a missing `./src` directory.
 - CI status: requires repository workflow review.
