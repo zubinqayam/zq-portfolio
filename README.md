@@ -1,32 +1,38 @@
-# ZQ Labs Portfolio
+# Zubin Qayam Portfolio
 
-## Corporate BD, Healthcare Operations & Smart Industry
+## Professional portfolio for business development, digital strategy, workflow automation, AI-assisted productivity, and public-safe project documentation.
 
-This portfolio presents the professional focus of **Zubin Qayam**, a Healthcare Business Development & Marketing professional exploring AI-enabled workflow systems, automation, corporate medical services, occupational health, and industrial workforce solutions.
+**Advancing professional growth through smart technology.**
 
-**Advancing Health & Industry Through Smart Technology.**
+## Project Overview
+
+This is a professional portfolio website for **Zubin Qayam**, presenting business development, digital strategy, workflow automation concepts, data dashboards, AI-assisted productivity experiments, and professional brand projects.
 
 ## Why This Project Exists
 
-The site is a working portfolio for communicating professional experience, project interests, and early technical explorations at the intersection of healthcare business development, industrial operations, and responsible automation.
+The portfolio provides a clear public-facing record of professional interests, prototype software, project documentation, and general operations concepts. It is designed to make selected work understandable to professional, creative, and technical audiences.
 
-## What It Shows
+## What the Portfolio Contains
 
-- Professional positioning and business-development context
-- Healthcare and occupational-health interests
-- Industrial workforce and smart-operations concepts
-- AI workflow, dashboard, and automation explorations
-- Selected visual work and portfolio material
+- Business development and digital strategy positioning
+- Workflow automation and general operations concepts
+- AI-assisted productivity experiments
+- Data dashboards and visual project documentation
+- Prototype software and professional brand projects
+
+## Target Audience
+
+This portfolio is intended for professional peers, prospective collaborators, hiring teams, technology audiences, and people interested in practical digital strategy and responsible automation concepts.
 
 ## Professional Context
 
-ZQ Labs is a personal innovation workspace. The projects represented here may be research systems, prototypes, experiments, or early-stage implementation work. The portfolio is intended to make the work understandable to professional and technical audiences without implying customer deployment or clinical validation.
+The portfolio is a public-safe project space. The work represented here may include prototypes, experiments, research systems, and early-stage implementation work. Descriptions should remain grounded in documented evidence and should not imply customer deployment or enterprise readiness.
 
 ## Current Status
 
-**Prototype** — active portfolio development and presentation work.
+**Preview / Active professional brand project**
 
-The site’s content, visual assets, and project descriptions should be reviewed periodically for accuracy, privacy, and claim scope.
+The site's content, visual assets, and project descriptions should be reviewed periodically for accuracy, privacy, accessibility, and claim scope.
 
 ## Architecture
 
@@ -79,15 +85,17 @@ pnpm run lint
 - Test status: no dedicated test script is currently defined in `package.json`.
 - Lint status: currently fails because the configured script targets a missing `./src` directory.
 - CI status: requires repository workflow review.
-- Known limitations: portfolio content and visual assets require ongoing review; the site is not a healthcare delivery or clinical decision system.
+- Known limitations: portfolio content, visual assets, and referenced build assets require ongoing review.
 
 ## Safety / Privacy Notes
 
+This repository is intended for public-safe portfolio content only. It must not include confidential organizational information, employer-specific material, client data, personal data, medical data, internal pricing, contracts, proposals, credentials, private messages, or non-public operational details.
+
+Do not claim production readiness, customer deployment, commercial use, clinical use, regulatory validation, or enterprise readiness unless independently verified.
+
 - Use demo, synthetic, or publicly available data only.
-- Do not include patient data, confidential client data, hospital internal records, OP numbers, or insurance information.
 - Do not commit passwords, API keys, private keys, tokens, or real `.env` files.
-- Do not publish corporate contact data, pricing, proposals, contracts, or WhatsApp exports.
-- This portfolio does not establish clinical validation, regulatory approval, customer deployment, or production readiness.
+- Review screenshots, sample content, links, and generated assets before publication.
 
 ## Links
 
@@ -98,7 +106,7 @@ pnpm run lint
 ## Roadmap
 
 - Refine project summaries and evidence links.
-- Add approved screenshots and demonstrations using safe data.
+- Add approved screenshots and demonstrations using public-safe data.
 - Record verification status for featured projects.
 - Keep professional claims aligned with documented experience and repository evidence.
 
