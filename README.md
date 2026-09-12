@@ -89,9 +89,9 @@ pnpm run lint
 
 ## Safety / Privacy Notes
 
-This repository is intended for public-safe portfolio content only. It must not include confidential organizational information, employer-specific material, client data, personal data, medical data, internal pricing, contracts, proposals, credentials, private messages, or non-public operational details.
+This repository is intended for public-safe portfolio content only. It must not include restricted organizational information, employer-specific material, private personal information, business-sensitive material, access credentials, private messages, or non-public process details.
 
-Do not claim production readiness, customer deployment, commercial use, clinical use, regulatory validation, or enterprise readiness unless independently verified.
+Do not claim production readiness, customer deployment, commercial use, regulated use, formal validation, or enterprise readiness unless independently verified.
 
 - Use demo, synthetic, or publicly available data only.
 - Do not commit passwords, API keys, private keys, tokens, or real `.env` files.
